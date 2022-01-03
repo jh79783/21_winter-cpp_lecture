@@ -37,7 +37,7 @@ void goo(int (*p)[5])
 {
 
 }
-
+#if 0
 int main()
 {
     int z[3][5];
@@ -58,4 +58,38 @@ int main()
 
     int x[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     foo(x, 10);
+}
+#endif
+
+
+// typedef
+// : 기존 타입의 별칭을 만들어서 사용할 수 있다.
+// > 복잡한 타입을 간결하게 사용할 수 있다.
+// x: [int[3]][int[3]]
+
+void hoo(int (*p)[3])
+{
+}
+// typedef를 통해 복잡한 배열 포인터를 간단히 사용할 수 있다.
+typedef int (*POINTER)[3];
+void goo(POINTER p)
+{
+}
+
+// C++11에서는 typedef 말고, using을 통해 타입의 별칭을 만들 수 있다.
+// C에서는 typedef를 사용해야하지만 C++11에서는 using을 통해 좀더 명확하게 확인할 수 있다.
+// 장점
+// 1) 가독성이 좋다
+// 2) typedef는 템플릿의 문법에서는 사용할 수 없다.
+using POINTER2 = int (*)[3];
+void xoo(POINTER2 p)
+{
+}
+
+int main()
+{
+    int x[2][3];
+    hoo(x);
+    goo(x);
+    xoo(x);
 }
