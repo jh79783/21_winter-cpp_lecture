@@ -43,4 +43,6 @@ int main()
     cout << p1.x << ", " << p1.y << endl;
 }
 
+// g++ 1.cpp -std=c++11로 지정해준다면 warning을 띄우지 않을 수 있다. 
+// or clang++ 1.cpp -std=c++11 / -std=c++14
 
