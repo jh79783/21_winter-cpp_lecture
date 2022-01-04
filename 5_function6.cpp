@@ -56,6 +56,7 @@ int main()
         cout << x[i] << endl;
 
     // C++11 - ranged for
+    // 한번에 꺼내서 쓰기 편하다.
     for (int n : x)
         cout << n << endl;
 }
