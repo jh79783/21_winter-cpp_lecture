@@ -9,8 +9,17 @@ using namespace std;
 // 함수의 타입은 함수의 파라미터와 반환타입에 의해 결정된다.
 //  => 함수의 파라미터와 반환타입이 동일하면 동일한 타입이다.
 
-int sub(int a, int b) { return a - b; } // int(int, int)
-int add(int a, int b) { return a + b; } // int(int, int)
+// int sub(int a, int b) { return a - b; } // int(int, int)
+// int add(int a, int b) { return a + b; } // int(int, int)
+auto sub(int a, int b) -> int
+{
+    return a - b;
+}
+
+auto add(int a, int b) -> int
+{
+    return a + b;
+}
 
 // C++11 - Trailing return type
 // => 함수를 만드는 새로운 문법을 제공한다.
