@@ -22,25 +22,43 @@ using namespace std;
 // > 괄호를 통해 매크로 함수의 우선순위 문제를 해결할 수 있다.
 // 2) ++x를 하는 경우 치환되면 ++x * ++x가 되어 버려 컴파일마다 결과가 다르게 나올 수 있다. -> 치명적인 문제점
 
-int square(int x)
+// int square(int x)
+// {
+//     printf("long\n");
+//     return x * x;
+// }
+
+long square(long l)
 {
-    return x * x;
+    printf("long\n");
+    return l * l;
 }
 
 double square(double x)
 {
+    printf("double\n");
     return x * x;
 }
 
 char square(char c)
 {
+    printf("char\n");
     return c * c;
 }
 
+// 오버로딩 규칙
+// 1) 정확한 타입을 찾는다.
+//      square(42) -> square(int)
+// - 상승
+//      square(int) -> square(long)
+//      square(int)가 없으면 square(long)으로 상승을 시킨다.
+// - 호환
+//      square(int) -> square(char)
+// 컴파일러 버전이 올라감에 따라 상승/호환은 의미가 없어진다.
 
 int main()
 {
-
+    square(42L);
 }
 
 
