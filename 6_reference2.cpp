@@ -68,8 +68,8 @@ int main()
     int x[5];
     printf("main: sizeof(%ld)\n", sizeof(x));
 
-    foo(x);
-    goo(x);
+    foo(x); // 배열의 첫번째 원소의 시작 주소로 전달된다. - 디케이
+    goo(x); // 참조 타입은 디케이가 발생하지 않는다. 정확한 타입이 명시되어야 한다.
 }
 
 
