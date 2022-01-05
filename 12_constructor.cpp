@@ -46,6 +46,7 @@ public:
 // malloc vs new
 // => 객체를 힙에 생성할 때, new는 생성자가 호출되지만, malloc은 생성자가 호출되지 않는다.
 
+#if 0
 int main()
 {
     // Point *p2 = static_cast<Point *>(malloc(sizeof(Point)));    // C
@@ -67,3 +68,28 @@ int main()
     // Point p2{10, 20}; // or Point p2(10, 20);
     // Point p3(10); // 컴파일 오류가 발생한다.
 }
+#endif
+
+class Rect
+{
+private:
+    Point p1;
+    Point p2;
+
+public:
+    Rect()
+    {
+        cout << "Rect()" << endl;
+    }
+    ~Rect()
+    {
+        cout << "~Rect()" << endl;
+    }
+}
+
+int main()
+{
+    Rect r;
+}
+// 먼저 멤버 데이터가 생성되어야 하기 때문에 멤버의 생성자가 먼저 호출되고 자신의 생성자가 호출된다.
+// 소멸자는 자신의 소멸자가 호출된 후 멤버의 소멸자가 호출된다.
