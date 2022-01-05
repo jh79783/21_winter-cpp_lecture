@@ -21,6 +21,7 @@ using namespace std;
 #include <stack>
 #include <vector>
 
+#if 0
 int main()
 {
     std::vector<int> v;
@@ -32,7 +33,7 @@ int main()
     {
         std::cout << e<< std::endl;
     }
-/*
+
     std::stack<int> s;
     s.push(10);
     s.push(20);
@@ -43,12 +44,29 @@ int main()
     std::cout << s.top() << std::endl;
     s.pop();
     std::cout << s.top() << std::endl;
-*/
 }
+#endif
 
 // 탐색
-// 1. Tree
-//  - 탐색 - O(logN)
-//  - 정렬 - O(N)
+// 1. Tree          => <map>
+//  - 탐색: O(logN)
+//  - 정렬: O(N)
 
-// 2. Hashtable
+// 2. Hashtable     => <unordered_map>(순서가없는)
+//  - 탐색: O(1)
+//  - 데이터 저장되는 순서가 다르다.
+//   => 퀵소트: O(NlogN)
+
+// map => 키-값 쌍으로 이루어진 데이터
+//      C++ / Jave
+//      C# / Swift - Dictionary 라고도 부른다.
+
+#include <map>
+int main()
+{
+    std::map<std::string, std::string> data;
+    data["홍길동"] = "010-1234-5678";
+    data["이순신"] = "010-2222-3333";
+
+    cout << data["홍길동"] << endl;
+}
