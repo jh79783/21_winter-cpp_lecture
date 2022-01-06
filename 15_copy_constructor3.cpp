@@ -32,6 +32,10 @@ Point &hoo()
     // 사라지는 메모리에 대한 참조를 반환하는 것은 미정의 사항이다.
 }
 
+// lvalue
+// rvalue
+// a = 3;
+
 int main()
 {
     foo()
