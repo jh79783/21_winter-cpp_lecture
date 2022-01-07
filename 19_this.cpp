@@ -10,6 +10,7 @@ private:
 
 public:
     // this : 멤버 함수를 호출한 객체의 주소가 전달된다.
+    //      > 객체 주소값
     void set(int a, int b)  // 실제 컴파일러는 이 set함수에 대해 다음과 같이 만듬 void set(Point* const this, int a, int b)
     {                       
         x = a;              // this->x = a;

@@ -31,13 +31,17 @@ int main()
 {
     Animal a;
     Dog d;
+    
+    a.Cry(); // 1
+    d.Cry(); // 2
 
     //Upcasting
-    Animal* p = &d;
+    Animal* p = &a;
     p->Cry(); // 1? 2?
 
-    a.Cry();
-    d.Cry();
+    p = &d;
+    p->Cry();
+
 }
 
 // 함수 오버로딩: 동일한 함수를 인자를 다르게 하여 정의하는 것
