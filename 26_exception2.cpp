@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
 
+void goo1();
+// 반환값이 없다.
+
+void goo2() noexcept;
+// 예외가 발생하지 않는다.
+
 class MemoryException : public std::exception
 {
 public:
