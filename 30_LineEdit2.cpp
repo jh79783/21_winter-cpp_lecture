@@ -69,6 +69,10 @@ public:
     }
 };
 
+// Template Method
+// 1) 런타임에 정책을 변경할 수 없다.
+// 2) 다른 종류의 클래스에서 해당 정책을 재사용할 수 없다.
+
 int main()
 {
     // LineEdit edit;   // -> 기존 LineEdit의 정책을 변경하는게 아니라, 새로운 정책을 새롭게 만드는 것
