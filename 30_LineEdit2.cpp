@@ -71,7 +71,7 @@ public:
 
 int main()
 {
-    // LineEdit edit;
+    // LineEdit edit;   // -> 기존 LineEdit의 정책을 변경하는게 아니라, 새로운 정책을 새롭게 만드는 것
     AddressLineEdit edit;
     while(1)
     {
