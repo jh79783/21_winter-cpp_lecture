@@ -45,6 +45,8 @@ int main()
     // => 캡쳐
     //     [n] : capture by value
     //     [&n] : capture by reference -> 값 변경이 가능하다.
+    //     [this]: 멤버 함수 안에서 람다 표현식을 사용할 경우,
+    //             다른 멤버 함수 또는 데이터에 접근이 가능하다.
     //  => 클로저: 다른 컨텍스트 변수의 참조가 가능하다.
     foo([&n](int a, int b){++n; return a + b + n;});
 }

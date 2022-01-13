@@ -66,7 +66,7 @@ MemberCommand<T>* cmd(void (T::*h)(), T* obj)
 
 // 5. 일관성을 위해서 FunctionCommand를 생성하는 함수도 제공한다.
 FunctionCommand* cmd(void (*f)())
-{ reutrn new FunctionCommand(f); }
+{ return new FunctionCommand(f); }
 
 #if 0
 int main()
