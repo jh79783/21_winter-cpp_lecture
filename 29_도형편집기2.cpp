@@ -14,6 +14,8 @@ using namespace std;
 //      - Clone() 가상함수 정의
 //  => Refactoring
 //    : 기존 코드의 기능을 변경하지 않고, 유지보수가 가능하도록 구조를 개선하는 작업
+//     "Replace type code with 다형성(polymorphism)"
+//     "Replace type code with Strategy or State"
 
 class Shape
 {
